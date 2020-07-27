@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content "ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+         rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'style.css' %}">
+        <title>Disease Predictor        
+        </title>
+     </head>
+    <body>
+         <header>
+              
+               <nav>
+                    <div class="logo">
+                        <h3>Disease Predictor</h3>
+                    </div>
+                    <ul class="nav-links">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                   
+                        <li>
+                            <a href="about">About</a>
+                        </li>
+                        <li>
+                            <a href="admin.html">Admin</a>
+                        </li>
+                    </ul>
+                    
+               </nav>
+         </header>
+         <main>
+             <section class="presentation">
+                 <div class="introduction">
+                    <div class="intro-text"> 
+                        <h1>
+                        Get Yourself check Just in 5 Minutes
+                        </h1>
+                        <p>
+                        you just have to analyse Yourself and by using latest technologies
+                        like AI,ML <BR>we will check what kind of disease you may have.
+                        </p>
+                   </div>
+                   <a href="/check">
+                        <div class="cta">
+                                <button class="cta-select">check Yourself</button>
+                        </div>
+                    </a>
+                 </div>
+                
+             </section>
+         </main>
+         
+    </body>
+</html>

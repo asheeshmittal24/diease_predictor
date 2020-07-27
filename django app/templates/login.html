@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content "ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+         rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" 
+        href="{% static 'style.css' %}">
+        <title> Login Page</title>
+    </head>
+    <body>
+        <header>
+              
+            <nav>
+                 <div class="logo">
+                     <h3>Disease Predictor</h3>
+                 </div>
+                 <ul class="nav-links">
+                     <li>
+                         <a href="index.html">Home</a>
+                     </li>
+                
+                     <li>
+                         <a href="a">About</a>
+                     </li>
+                     <li>
+                         <a href="admin.html">Admin</a>
+                     </li>
+                 </ul>
+                 
+            </nav>
+        </header>
+        <form  action="{%  url 'admin'  %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+        <div class="loginbox">
+          <h2> Login</h2>
+          <div class="textbox">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <form  action="{%  url 'admin'  %}" method="post">
+              <input type="text" placeholder="Username" name="name">
+          </div>
+          <div class="textbox">
+            <i class="fas fa-key"></i>
+              <input type="password" placeholder="Password" name="pass">
+          </div>
+          {{result}}
+          <button class="btn" type="submit" >Sign in</button>
+        </form>
+        </div>
+
+    </body>
+</html>

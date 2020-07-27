@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content "ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+         rel="stylesheet"
+        />
+    <style>
+            body{margin: 0px; padding: 0px; box-sizing: border-box;font-family: 'Poppins', sans-serif; background-image: url(static/back.jpg); background-size: cover;}
+            button{font-family: 'Poppins', sans-serif;}
+            nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 0vh;
+    background-color: rgb(196, 82, 17);
+
+}
+.Probability{
+  margin-bottom: 200px;
+  margin-left: 500px;
+  color: 585772;
+  
+  
+}
+            .logo{color: antiquewhite;text-transform: uppercase;letter-spacing: 5px;font-size: 20px;}
+            .nav-links {
+                 display: flex;
+                    justify-content: space-around;
+                    width: 30%;
+                    }
+            .nav-links li{
+                    list-style: none;
+                    }
+           .nav-links a{
+                      color: antiquewhite;
+                      text-decoration: none;
+                     letter-spacing: 3px;
+                     font-weight: bold;
+                     font-size: 14px;
+                        }
+                        .form{
+    display: flex;
+    margin-left: 230px;
+    margin-top: 50px;
+    margin-right: 0px;
+    width: 90%;
+    margin-bottom: 100px;
+    
+    
+    
+    
+}
+.h2{
+    text-align: center;
+}
+.set1{
+    flex: 1;
+    margin-right: auto;
+
+    
+}
+.set2
+{   
+    flex: 1;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.set3{
+    flex: 2;
+}
+.per{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 50px;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0,0,.5);
+    box-sizing:border-box;
+    box-shadow: 0 15px 25px rgba(0, 0,0,.2);
+    border-radius: 10px;
+}
+.per h2{
+    text-align: center;
+}
+.submit{
+    widows: 100px;
+    background:#c36cbb;
+    border:none;
+    color:white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 12px;
+    align-items: center;
+    margin-bottom: 200px;
+    margin-left: 700px;
+    padding:20px 40px 20px 40px;
+    
+}
+    </style>
+        <title>Disease Predictor        
+        </title>
+</head>
+     <body>
+        <header>
+              
+            <nav>
+                 <div class="logo">
+                     <h3>Disease Predictor</h3>
+                 </div>
+                 <ul class="nav-links">
+                     <li>
+                         <a href="/page2">Home</a>
+                     </li>
+                
+                     <li>
+                         
+                     </li>
+                     <li>
+                         <a href="/">Admin</a>
+                     </li>
+                 </ul>
+                 
+            </nav>
+      </header>
+      <main>
+        
+        <h2 class="h2">fill the details below</h2>
+          
+            <form  action="{%  url 'check'  %}" method="post" enctype="multipart/form-data">
+              <section class="form">
+                {% csrf_token %}
+                <div class="set1">
+                <!--start   kfjbgadfkjgbadfkjgafbjkADBGAKJFDBGFKJDGBADKJGBAFGKJABGKJAFDBGADFKJGBAFLKJGVHKJ-->
+
+
+
+                
+                <input type="checkbox" id="itching" name="check" value="0">
+                <label for="itching">itching</label><br>
+                <input type="checkbox" id="skin_rash" name="check" value="1">
+                <label for="skin_rash">skin_rash</label><br>
+                <input type="checkbox" id="nodal_skin_eruptions" name="check" value="2">
+                <label for="nodal_skin_eruptions">nodal_skin_eruptions</label><br>
+                <input type="checkbox" id="continuous_sneezing" name="check" value="3">
+                <label for="continuous_sneezing">continuous_sneezing</label><br>
+                <input type="checkbox" id="shivering" name="check" value="4">
+                <label for="shivering"> shivering </label><br>
+                <input type="checkbox" id="chills" name="check" value="5">
+                <label for="chills"> chills </label><br>
+                <input type="checkbox" id="joint_pain" name="check" value="6">
+                <label for="joint_pain"> joint_pain </label><br>
+                <input type="checkbox" id="stomach_pain" name="check" value="7">
+                <label for="stomach_pain"> stomach_pain </label><br>
+                <input type="checkbox" id="acidity" name="check" value="8">
+                <label for="acidity"> acidity </label><br>
+                <input type="checkbox" id="ulcers_on_tongue" name="check" value="9">
+                <label for="ulcers_on_tongue"> ulcers_on_tongue </label><br>
+                <input type="checkbox" id="muscle_wasting" name="check" value="10">
+                <label for="muscle_wasting"> muscle_wasting </label><br>
+                <input type="checkbox" id="vomiting" name="check" value="11">
+                <label for="vomiting"> vomiting </label><br>
+                <input type="checkbox" id="burning_micturition" name="check" value="12">
+                <label for="burning_micturition"> burning_micturition </label><br>
+                <input type="checkbox" id="spotting_urination" name="check" value="13">
+                <label for="spotting_urination"> spotting_urination </label><br>
+                <input type="checkbox" id="fatigue" name="check" value="14">
+                <label for="fatigue"> fatigue </label><br>
+                <input type="checkbox" id="weight_gain" name="check" value="15">
+                <label for="weight_gain"> weight_gain </label><br>
+                <input type="checkbox" id="anxiety" name="check" value="16">
+                <label for="anxiety"> anxiety </label><br>
+                <input type="checkbox" id="cold_hands_and_feets" name="check" value="17">
+                <label for="cold_hands_and_feets"> cold_hands_and_feets </label><br>
+                <input type="checkbox" id="mood_swings" name="check" value="18">
+                <label for="mood_swings"> mood_swings </label><br>
+                <input type="checkbox" id="weight_loss" name="check" value="19">
+                <label for="weight_loss"> weight_loss </label><br>
+                <input type="checkbox" id="restlessness" name="check" value="20">
+                <label for="restlessness"> restlessness </label><br>
+                <input type="checkbox" id="lethargy" name="check" value="21">
+                <label for="lethargy"> lethargy </label><br>
+                <input type="checkbox" id="patches_in_throat" name="check" value="22">
+                <label for="patches_in_throat"> patches_in_throat </label><br>
+                <input type="checkbox" id="irregular_sugar_level" name="check" value="23">
+                <label for="irregular_sugar_level"> irregular_sugar_level </label><br>
+                <input type="checkbox" id="cough" name="check" value="24">
+                <label for="cough"> cough </label><br>
+                <input type="checkbox" id="high_fever" name="check" value="25">
+                <label for="high_fever"> high_fever </label><br>
+                <input type="checkbox" id="sunken_eyes" name="check" value="26">
+                <label for="sunken_eyes"> sunken_eyes </label><br>
+                <input type="checkbox" id="breathlessness" name="check" value="27">
+                <label for="breathlessness"> breathlessness </label><br>
+                <input type="checkbox" id="sweating" name="check" value="28">
+                <label for="sweating"> sweating </label><br>
+                <input type="checkbox" id="dehydration" name="check" value="29">
+                <label for="dehydration"> dehydration </label><br>
+                <input type="checkbox" id="indigestion" name="check" value="30">
+                <label for="indigestion"> indigestion </label><br>
+                <input type="checkbox" id="headache" name="check" value="31">
+                <label for="headache"> headache </label><br>
+                <input type="checkbox" id="yellowish_skin" name="check" value="32">
+                <label for="yellowish_skin"> yellowish_skin </label><br>
+                <input type="checkbox" id="dark_urine" name="check" value="33">
+                <label for="dark_urine"> dark_urine </label><br>
+                <input type="checkbox" id="nausea" name="check" value="34">
+                <label for="nausea"> nausea </label><br>
+                <input type="checkbox" id="loss_of_appetite" name="check" value="35">
+                <label for="loss_of_appetite"> loss_of_appetite </label><br>
+                <input type="checkbox" id="pain_behind_the_eyes" name="check" value="36">
+                <label for="pain_behind_the_eyes"> pain_behind_the_eyes </label><br>
+                <input type="checkbox" id="back_pain" name="check" value="37">
+                <label for="back_pain"> back_pain </label><br>
+                <input type="checkbox" id="constipation" name="check" value="38">
+                <label for="constipation"> constipation </label><br>
+                <input type="checkbox" id="abdominal_pain" name="check" value="39">
+                <label for="abdominal_pain"> abdominal_pain </label><br>
+                <input type="checkbox" id="diarrhoea" name="check" value="40">
+                <label for="diarrhoea"> diarrhoea </label><br>
+                <input type="checkbox" id="mild_fever" name="check" value="41">
+                <label for="mild_fever"> mild_fever </label><br>
+                <input type="checkbox" id="yellow_urine" name="check" value="42">
+                <label for="yellow_urine"> yellow_urine </label><br>
+                <input type="checkbox" id="yellowing_of_eyes" name="check" value="43">
+                <label for="yellowing_of_eyes"> yellowing_of_eyes </label><br>
+                <input type="checkbox" id="acute_liver_failure" name="check" value="44">
+                <label for="acute_liver_failure"> acute_liver_failure </label><br>
+                <input type="checkbox" id="fluid_overload" name="check" value="45">
+                <label for="fluid_overload"> fluid_overload </label><br>
+                <input type="checkbox" id="swelling_of_stomach" name="check" value="46">
+                <label for="swelling_of_stomach"> swelling_of_stomach </label><br>
+                <input type="checkbox" id="swelled_lymph_nodes" name="check" value="47">
+                <label for="swelled_lymph_nodes"> swelled_lymph_nodes </label><br>
+                <input type="checkbox" id="malaise" name="check" value="48">
+                <label for="malaise"> malaise </label><br>
+                <input type="checkbox" id="blurred_and_distorted_vision" name="check" value="49">
+                <label for="blurred_and_distorted_vision"> blurred_and_distorted_vision </label><br>
+               </div>
+               <div class="set2">
+                <input type="checkbox" id="phlegm" name="check" value="50">
+                <label for="phlegm"> phlegm </label><br>
+                <input type="checkbox" id="throat_irritation" name="check" value="51">
+                <label for="throat_irritation"> throat_irritation </label><br>
+                <input type="checkbox" id="redness_of_eyes" name="check" value="52">
+                <label for="redness_of_eyes"> redness_of_eyes </label><br>
+                <input type="checkbox" id="sinus_pressure" name="check" value="53">
+                <label for="sinus_pressure"> sinus_pressure </label><br>
+                <input type="checkbox" id="runny_nose" name="check" value="54">
+                <label for="runny_nose"> runny_nose </label><br>
+                <input type="checkbox" id="congestion" name="check" value="55">
+                <label for="congestion"> congestion </label><br>
+                <input type="checkbox" id="chest_pain" name="check" value="56">
+                <label for="chest_pain"> chest_pain </label><br>
+                <input type="checkbox" id="weakness_in_limbs" name="check" value="57">
+                <label for="weakness_in_limbs"> weakness_in_limbs </label><br>
+                <input type="checkbox" id="fast_heart_rate" name="check" value="58">
+                <label for="fast_heart_rate"> fast_heart_rate </label><br>
+                <input type="checkbox" id="pain_during_bowel_movements" name="check" value="59">
+                <label for="pain_during_bowel_movements"> pain_during_bowel_movements </label><br>
+                <input type="checkbox" id="pain_in_anal_region" name="check" value="60">
+                <label for="pain_in_anal_region"> pain_in_anal_region </label><br>
+                <input type="checkbox" id="bloody_stool" name="check" value="61">
+                <label for="bloody_stool"> bloody_stool </label><br>
+                <input type="checkbox" id="irritation_in_anus" name="check" value="62">
+                <label for="irritation_in_anus"> irritation_in_anus </label><br>
+                <input type="checkbox" id="neck_pain" name="check" value="63">
+                <label for="neck_pain"> neck_pain </label><br>
+                <input type="checkbox" id="dizziness" name="check" value="64">
+                <label for="dizziness"> dizziness </label><br>
+                <input type="checkbox" id="cramps" name="check" value="65">
+                <label for="cramps"> cramps </label><br>
+                <input type="checkbox" id="bruising" name="check" value="66">
+                <label for="bruising"> bruising </label><br>
+                <input type="checkbox" id="obesity" name="check" value="67">
+                <label for="obesity"> obesity </label><br>
+                <input type="checkbox" id="swollen_legs" name="check" value="68">
+                <label for="swollen_legs"> swollen_legs </label><br>
+                <input type="checkbox" id="swollen_blood_vessels" name="check" value="69">
+                <label for="swollen_blood_vessels"> swollen_blood_vessels </label><br>
+                <input type="checkbox" id="puffy_face_and_eyes" name="check" value="70">
+                <label for="puffy_face_and_eyes"> puffy_face_and_eyes </label><br>
+                <input type="checkbox" id="enlarged_thyroid" name="check" value="71">
+                <label for="enlarged_thyroid"> enlarged_thyroid </label><br>
+                <input type="checkbox" id="brittle_nails" name="check" value="72">
+                <label for="brittle_nails"> brittle_nails </label><br>
+                <input type="checkbox" id="swollen_extremeties" name="check" value="73">
+                <label for="swollen_extremeties"> swollen_extremeties </label><br>
+                <input type="checkbox" id="excessive_hunger" name="check" value="74">
+                <label for="excessive_hunger"> excessive_hunger </label><br>
+                <input type="checkbox" id="extra_marital_contacts" name="check" value="75">
+                <label for="extra_marital_contacts"> extra_marital_contacts </label><br>
+                <input type="checkbox" id="drying_and_tingling_lips" name="check" value="76">
+                <label for="drying_and_tingling_lips"> drying_and_tingling_lips </label><br>
+                <input type="checkbox" id="slurred_speech" name="check" value="77">
+                <label for="slurred_speech"> slurred_speech </label><br>
+                <input type="checkbox" id="knee_pain" name="check" value="78">
+                <label for="knee_pain"> knee_pain </label><br>
+                <input type="checkbox" id="hip_joint_pain" name="check" value="79">
+                <label for="hip_joint_pain"> hip_joint_pain </label><br>
+                <input type="checkbox" id="muscle_weakness" name="check" value="80">
+                <label for="muscle_weakness"> muscle_weakness </label><br>
+                <input type="checkbox" id="stiff_neck" name="check" value="81">
+                <label for="stiff_neck"> stiff_neck </label><br>
+                <input type="checkbox" id="swelling_joints" name="check" value="82">
+                <label for="swelling_joints"> swelling_joints </label><br>
+                <input type="checkbox" id="movement_stiffness" name="check" value="83">
+                <label for="movement_stiffness"> movement_stiffness </label><br>
+                <input type="checkbox" id="spinning_movements" name="check" value="84">
+                <label for="spinning_movements"> spinning_movements </label><br>
+                <input type="checkbox" id="loss_of_balance" name="check" value="85">
+                <label for="loss_of_balance"> loss_of_balance </label><br>
+                <input type="checkbox" id="unsteadiness" name="check" value="86">
+                <label for="unsteadiness"> unsteadiness </label><br>
+                <input type="checkbox" id="weakness_of_one_body_side" name="check" value="87">
+                <label for="weakness_of_one_body_side"> weakness_of_one_body_side </label><br>
+                <input type="checkbox" id="loss_of_smell" name="check" value="88">
+                <label for="loss_of_smell"> loss_of_smell </label><br>
+                <input type="checkbox" id="bladder_discomfort" name="check" value="89">
+                <label for="bladder_discomfort"> bladder_discomfort </label><br>
+                <input type="checkbox" id="foul_smell_of_urine" name="check" value="90">
+                <label for="foul_smell_of_urine"> foul_smell_of_urine </label><br>
+                <input type="checkbox" id="continuous_feel_of_urine" name="check" value="91">
+                <label for="continuous_feel_of_urine"> continuous_feel_of_urine </label><br>
+                <input type="checkbox" id="passage_of_gases" name="check" value="92">
+                <label for="passage_of_gases"> passage_of_gases </label><br>
+                <input type="checkbox" id="internal_itching" name="check" value="93">
+                <label for="internal_itching"> internal_itching </label><br>
+                <input type="checkbox" id="toxic_look_(typhos)" name="check" value="94">
+                <label for="toxic_look_(typhos)"> toxic_look_(typhos) </label><br>
+                <input type="checkbox" id="depression" name="check" value="95">
+                <label for="depression"> depression </label><br>
+                <input type="checkbox" id="irritability" name="check" value="96">
+                <label for="irritability"> irritability </label><br>
+                <input type="checkbox" id="muscle_pain" name="check" value="97">
+                <label for="muscle_pain"> muscle_pain </label><br>
+                <input type="checkbox" id="altered_sensorium" name="check" value="98">
+                <label for="altered_sensorium"> altered_sensorium </label><br>
+                <input type="checkbox" id="red_spots_over_body" name="check" value="99">
+                <label for="red_spots_over_body"> red_spots_over_body </label><br>
+               </div>
+               <div class="set3">
+               
+                <input type="checkbox" id="belly_pain" name="check" value="100">
+                <label for="belly_pain"> belly_pain </label><br>
+                <input type="checkbox" id="abnormal_menstruation" name="check" value="101">
+                <label for="abnormal_menstruation"> abnormal_menstruation </label><br>
+                <input type="checkbox" id="dischromic_patches" name="check" value="102">
+                <label for="dischromic_patches"> dischromic_patches </label><br>
+                <input type="checkbox" id="watering_from_eyes" name="check" value="103">
+                <label for="watering_from_eyes"> watering_from_eyes </label><br>
+                <input type="checkbox" id="increased_appetite" name="check" value="104">
+                <label for="increased_appetite"> increased_appetite </label><br>
+                <input type="checkbox" id="polyuria" name="check" value="105">
+                <label for="polyuria"> polyuria </label><br>
+                <input type="checkbox" id="family_history" name="check" value="106">
+                <label for="family_history"> family_history </label><br>
+                <input type="checkbox" id="mucoid_sputum" name="check" value="107">
+                <label for="mucoid_sputum"> mucoid_sputum </label><br>
+                <input type="checkbox" id="rusty_sputum" name="check" value="108">
+                <label for="rusty_sputum"> rusty_sputum </label><br>
+                <input type="checkbox" id="lack_of_concentration" name="check" value="109">
+                <label for="lack_of_concentration"> lack_of_concentration </label><br>
+                <input type="checkbox" id="visual_disturbances" name="check" value="110">
+                <label for="visual_disturbances"> visual_disturbances </label><br>
+                <input type="checkbox" id="receiving_blood_transfusion" name="check" value="111">
+                <label for="receiving_blood_transfusion"> receiving_blood_transfusion </label><br>
+                <input type="checkbox" id="receiving_unsterile_injections" name="check" value="112">
+                <label for="receiving_unsterile_injections"> receiving_unsterile_injections </label><br>
+                <input type="checkbox" id="coma" name="check" value="113">
+                <label for="coma"> coma </label><br>
+                <input type="checkbox" id="stomach_bleeding" name="check" value="114">
+                <label for="stomach_bleeding"> stomach_bleeding </label><br>
+                <input type="checkbox" id="distention_of_abdomen" name="check" value="115">
+                <label for="distention_of_abdomen"> distention_of_abdomen </label><br>
+                <input type="checkbox" id="history_of_alcohol_consumption" name="check" value="116">
+                <label for="history_of_alcohol_consumption"> history_of_alcohol_consumption </label><br>
+                <input type="checkbox" id="fluid_overload" name="check" value="117">
+                <label for="fluid_overload"> fluid_overload </label><br>
+                <input type="checkbox" id="blood_in_sputum" name="check" value="118">
+                <label for="blood_in_sputum"> blood_in_sputum </label><br>
+                <input type="checkbox" id="prominent_veins_on_calf" name="check" value="119">
+                <label for="prominent_veins_on_calf"> prominent_veins_on_calf </label><br>
+                <input type="checkbox" id="palpitations" name="check" value="120">
+                <label for="palpitations"> palpitations </label><br>
+                <input type="checkbox" id="painful_walking" name="check" value="121">
+                <label for="painful_walking"> painful_walking </label><br>
+                <input type="checkbox" id="pus_filled_pimples" name="check" value="122">
+                <label for="pus_filled_pimples"> pus_filled_pimples </label><br>
+                <input type="checkbox" id="blackheads" name="check" value="123">
+                <label for="blackheads"> blackheads </label><br>
+                <input type="checkbox" id="scurring" name="check" value="124">
+                <label for="scurring"> scurring </label><br>
+                <input type="checkbox" id="skin_peeling" name="check" value="125">
+                <label for="skin_peeling"> skin_peeling </label><br>
+                <input type="checkbox" id="silver_like_dusting" name="check" value="126">
+                <label for="silver_like_dusting"> silver_like_dusting </label><br>
+                <input type="checkbox" id="small_dents_in_nails" name="check" value="127">
+                <label for="small_dents_in_nails"> small_dents_in_nails </label><br>
+                <input type="checkbox" id="inflammatory_nails" name="check" value="128">
+                <label for="inflammatory_nails"> inflammatory_nails </label><br>
+                <input type="checkbox" id="blister" name="check" value="129">
+                <label for="blister"> blister</label><br>
+                <input type="checkbox" id="red_sore_around_nose" name="check" value="130">
+                <label for="red_sore_around_nose"> red_sore_around_nose </label><br>
+                <input type="checkbox" id="yellow_crust_ooze" name="check" value="131">
+                <label for="yellow_crust_ooze"> yellow_crust_ooze </label><br>
+
+
+                    <!--end adgndfkjnhdfk.Fvnlsukhbaiutngiuaninlurgnldkjhndghja-->
+                </div>
+                
+            
+            
+          </section>
+          <div>
+              <button class="submit" type="submit" name="submit" value="submit">Submit</button>
+              </div>
+            </form>
+             <div class="Probability"><h2>According to given symptoms patient most likely has {{result}}<br><br>And the Probability of having {{result}} is {{prediction}}%.</h2>
+          </div>  
+      </main>
+     </body>
+     </html>

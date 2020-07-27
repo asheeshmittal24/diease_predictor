@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content "ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+         rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" 
+        href="{% static 'style.css' %}">
+        <title>Disease Predictor        
+        </title>
+     </head>
+     <body>
+        <header>
+              
+            <nav>
+                 <div class="logo">
+                     <h3>Disease Predictor</h3>
+                 </div>
+                 <ul class="nav-links">
+                     <li>
+                         <a href="index.html">Home</a>
+                     </li>
+                
+                     <li>
+                         <a href="about">About</a>
+                     </li>
+                     <li>
+                         <a href="admin.html">Admin</a>
+                     </li>
+                 </ul>
+                 
+            </nav>
+      </header>
+      <main>
+        <section>
+            <div class="per">
+                <h2>Personal details:</h2><br>
+                <form class="form2">
+                    <input type="text"  name="name" placeholder="Name" autocomplete="off"><br><br>
+                    <input type="radio" id="male" name="gender" value="male">Male
+                    <input type="radio" id="female" name="gender" value="female">Female
+                    <input type="radio" id="others" name="gender" value="others">Others
+                    <br><br>
+                    <input type="date" class="date" name="dob" aria-placeholder="none"><br><br>
+                    <input type="text" id="email" name="email" placeholder="email" autocomplete="off"><br><br>
+                </form>
+                <a href="checkup.html">
+                        <button class="perinfobtn" name="submit" value="submit">Next</button>
+                </a>
+                
+            </div>
+        </section>
